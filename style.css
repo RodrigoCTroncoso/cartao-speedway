@@ -1,0 +1,230 @@
+/* Importa a fonte Inter do Google Fonts para um visual moderno */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Aplica a fonte Inter */
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #1a202c, #4a5568); /* Fundo gradiente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ocupa a largura total do pai */
+}
+
+.card {
+    background-color: #2d3748; /* Cor de fundo do cartão */
+    color: #fff; /* Cor do texto padrão */
+    border-radius: 0.75rem; /* Cantos arredondados */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Sombra */
+    padding: 2rem; /* Espaçamento interno */
+    max-width: 24rem; /* Largura máxima para uma visualização vertical típica (celular) */
+    width: 100%;
+    border: 2px solid #805ad5; /* Borda roxa */
+    transition: transform 0.3s ease-in-out; /* Transição para o hover effect */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Leve zoom no hover */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Espaçamento abaixo do cabeçalho */
+}
+
+.header h1 {
+    font-size: 3rem; /* Tamanho da fonte para o título */
+    font-weight: 800; /* Peso da fonte extra bold */
+    background-image: linear-gradient(to right, #63b3ed, #805ad5); /* Gradiente para o texto */
+    -webkit-background-clip: text; /* Corta o fundo para o formato do texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para que o gradiente apareça */
+    background-clip: text;
+    color: transparent; /* Fallback para browsers que não suportam -webkit-text-fill-color */
+    letter-spacing: -0.05em; /* Espaçamento entre letras */
+    margin: 0; /* Remove margens padrão do h1 */
+}
+
+.header .subtitle {
+    font-size: 1.25rem; /* Tamanho da fonte para o subtítulo */
+    color: #cbd5e0; /* Cor cinza claro */
+    margin-top: 0.5rem; /* Espaçamento acima */
+    margin-bottom: 0;
+}
+
+.header .slogan {
+    font-size: 1.125rem; /* Tamanho da fonte para o slogan */
+    color: #a0aec0; /* Cor cinza mais escura */
+    margin-top: 0.25rem; /* Espaçamento acima */
+    margin-bottom: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title h2 {
+    font-size: 1.75rem; /* Tamanho da fonte para títulos de seção */
+    font-weight: 600;
+    color: #90cdf4; /* Cor azul claro */
+    margin: 0;
+}
+
+.services-list { /* Renomeado para services-list para o layout vertical */
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    gap: 1rem; /* Espaçamento entre os itens */
+    margin-bottom: 1.5rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    background-color: #4a5568; /* Cor de fundo do item de serviço */
+    padding: 0.75rem; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Cantos arredondados */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Sombra */
+    width: auto; /* Deixa a largura automática */
+}
+
+.service-item .icon {
+    font-size: 1.875rem; /* Tamanho do ícone */
+    margin-right: 0.75rem; /* Espaçamento à direita do ícone */
+}
+
+.service-item h3 {
+    font-size: 1.25rem; /* Tamanho da fonte do título do serviço */
+    font-weight: 600; /* Peso da fonte semibold */
+    color: #90cdf4; /* Cor azul claro */
+    margin: 0 0 0.25rem 0; /* Remove margens padrão e adiciona um pouco de espaço abaixo */
+}
+
+.service-item p {
+    font-size: 0.875rem; /* Tamanho da fonte da descrição */
+    color: #a0aec0; /* Cor cinza mais escura */
+    margin: 0; /* Remove margens padrão */
+}
+
+.benefits-list {
+    list-style: none; /* Remove marcadores de lista padrão */
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    color: #cbd5e0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.benefits-list .checkmark {
+    color: #48bb78; /* Cor verde para o checkmark */
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column; /* Botões um abaixo do outro (sempre vertical) */
+    gap: 1rem; /* Espaçamento entre os botões */
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700; /* Bold */
+    padding: 0.75rem 1.5rem; /* Padding py-3 px-6 */
+    border-radius: 9999px; /* rounded-full */
+    transition: all 0.3s ease-in-out; /* Transições para hover effects */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra */
+    text-decoration: none; /* Remove sublinhado do link */
+    width: 100%; /* Faz o botão ocupar a largura total do pai */
+}
+
+.btn:hover {
+    transform: translateY(-0.125rem); /* hover:-translate-y-1 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); /* Sombra mais intensa no hover */
+}
+
+.btn .icon-svg {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    margin-right: 0.5rem; /* mr-2 */
+}
+
+.instagram-btn {
+    background: linear-gradient(to right, #ed64a6, #805ad5); /* from-pink-500 to-purple-600 */
+}
+
+.instagram-btn:hover {
+    background: linear-gradient(to right, #d53f8c, #6b46c1); /* hover:from-pink-600 hover:to-purple-700 */
+}
+
+.whatsapp-btn {
+    background: linear-gradient(to right, #48bb78, #38a169); /* from-green-500 to-green-700 */
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(to right, #38a169, #2f855a); /* hover:from-green-600 hover:to-green-800 */
+}
+
+/* Media Queries para responsividade - Ajustes para manter o layout vertical em telas maiores */
+@media (min-width: 640px) { /* Corresponde ao breakpoint 'sm' */
+    .card {
+        max-width: 28rem; /* Ajusta largura para uma visualização vertical maior */
+    }
+    .header h1 {
+        font-size: 3.5rem; /* Aumenta um pouco o título */
+    }
+    .header .subtitle {
+        font-size: 1.35rem;
+    }
+    .header .slogan {
+        font-size: 1.15rem;
+    }
+    .service-item h3 {
+        font-size: 1.15rem;
+    }
+    .btn {
+        width: auto; /* Deixa os botões com largura automática em telas maiores para não ficarem "esticados" demais */
+        padding: 0.75rem 2rem;
+    }
+    .contact-buttons {
+        flex-direction: row; /* Botões um ao lado do outro apenas se o card for largo o suficiente */
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) { /* Corresponde ao breakpoint 'md' */
+    .card {
+        max-width: 32rem; /* Mais um ajuste para telas maiores */
+    }
+    .header h1 {
+        font-size: 4rem;
+    }
+    .header .subtitle {
+        font-size: 1.5rem;
+    }
+    .header .slogan {
+        font-size: 1.25rem;
+    }
+    .service-item h3 {
+        font-size: 1.25rem;
+    }
+}
