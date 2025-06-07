@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem; /* Padding para o corpo para evitar que o cartão grude nas bordas */
     box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
 }
 
@@ -27,7 +27,7 @@ body {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Sombra */
     padding: 2rem; /* Espaçamento interno */
     max-width: 24rem; /* Largura máxima para uma visualização vertical típica (celular) */
-    width: 100%;
+    width: 100%; /* Garante que o cartão ocupe a largura total disponível até o max-width */
     border: 2px solid #805ad5; /* Borda roxa */
     transition: transform 0.3s ease-in-out; /* Transição para o hover effect */
 }
@@ -100,6 +100,7 @@ body {
 .service-item .icon {
     font-size: 1.875rem; /* Tamanho do ícone */
     margin-right: 0.75rem; /* Espaçamento à direita do ícone */
+    flex-shrink: 0; /* Impede que o ícone diminua para caber */
 }
 
 .service-item h3 {
@@ -124,7 +125,7 @@ body {
 
 .benefits-list li {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinha o checkmark e texto ao topo */
     margin-bottom: 0.5rem;
     font-size: 1rem;
 }
@@ -134,17 +135,18 @@ body {
     font-weight: 800;
     font-size: 1.25rem;
     margin-right: 0.5rem;
+    flex-shrink: 0; /* Impede que o checkmark diminua */
 }
 
 .contact-buttons {
     display: flex;
-    flex-direction: column; /* Botões um abaixo do outro (sempre vertical) */
+    flex-direction: column; /* Botões um abaixo do outro (sempre vertical para melhor mobile) */
     gap: 1rem; /* Espaçamento entre os botões */
     margin-top: 1.5rem;
 }
 
 .btn {
-    display: inline-flex;
+    display: flex; /* Usar flex para alinhar ícone e texto */
     align-items: center;
     justify-content: center;
     color: #fff;
@@ -155,6 +157,7 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra */
     text-decoration: none; /* Remove sublinhado do link */
     width: 100%; /* Faz o botão ocupar a largura total do pai */
+    box-sizing: border-box; /* Inclui padding e border na largura */
 }
 
 .btn:hover {
@@ -166,6 +169,7 @@ body {
     width: 1.5rem; /* w-6 */
     height: 1.5rem; /* h-6 */
     margin-right: 0.5rem; /* mr-2 */
+    flex-shrink: 0; /* Impede que o ícone diminua */
 }
 
 .instagram-btn {
@@ -187,7 +191,7 @@ body {
 /* Media Queries para responsividade - Ajustes para manter o layout vertical em telas maiores */
 @media (min-width: 640px) { /* Corresponde ao breakpoint 'sm' */
     .card {
-        max-width: 28rem; /* Ajusta largura para uma visualização vertical maior */
+        max-width: 26rem; /* Ajusta largura para uma visualização vertical maior */
     }
     .header h1 {
         font-size: 3.5rem; /* Aumenta um pouco o título */
@@ -201,19 +205,14 @@ body {
     .service-item h3 {
         font-size: 1.15rem;
     }
-    .btn {
-        width: auto; /* Deixa os botões com largura automática em telas maiores para não ficarem "esticados" demais */
-        padding: 0.75rem 2rem;
-    }
     .contact-buttons {
-        flex-direction: row; /* Botões um ao lado do outro apenas se o card for largo o suficiente */
-        justify-content: center;
+        flex-direction: column; /* Mantenha os botões em coluna para visualização vertical compacta */
     }
 }
 
 @media (min-width: 768px) { /* Corresponde ao breakpoint 'md' */
     .card {
-        max-width: 32rem; /* Mais um ajuste para telas maiores */
+        max-width: 30rem; /* Mais um ajuste para telas maiores */
     }
     .header h1 {
         font-size: 4rem;
