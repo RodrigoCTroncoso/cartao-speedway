@@ -3,15 +3,13 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif; /* Aplica a fonte Inter */
+    font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #1a202c, #4a5568); /* Fundo gradiente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem; /* Padding para o corpo para evitar que o cartão grude nas bordas */
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+    background: linear-gradient(to bottom right, #1a202c, #4a5568);
+    padding: 1rem;
+    box-sizing: border-box;
 }
+
 
 .card-container {
     display: flex;
